@@ -1,12 +1,12 @@
 # cor-debian-packages
 
-The current Regnum client on Linux misses some libraries out of the box, and
-requires extra symlinks for outdated libtinfo and libncursesw. This package
-fixes it.
+The current Regnum client on Linux may miss some libraries out of the box, and
+requires extra symlinks for the outdated libtinfo and libncursesw used by the
+client. This package fixes it.
 
 ## Install
 
-Grap the .deb corresponding to your architecture and install through:
+Grab the .deb corresponding to your architecture and install through:
 
 ```
 sudo apt install ./cor-debian-packages_4_$(arch).deb
@@ -24,5 +24,7 @@ That's it.
 5. Before pushing to git, don't forget to change the README with the proper
    versions numbers.
 
+## References
 
+[Same thing but on Void Linux](https://discord.com/channels/542061814704373782/542118747901788193/1204901225506668654)
 
