@@ -3,9 +3,11 @@ Priority: optional
 Essential: no
 Standards-Version: 4.5.1
 Package: cor-debian-packages
-Version: 1
+Version: 2
 Maintainer: mascal
 Architecture: i386
+Copyright: LICENSE
+Readme: README.md
 Depends:
  libncursesw6,
  libtinfo6
