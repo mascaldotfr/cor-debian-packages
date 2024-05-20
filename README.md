@@ -19,7 +19,7 @@ Grab the .deb corresponding to your architecture
 and install through:
 
 ```
-sudo apt install ./cor-debian-packages_5_$(arch).deb
+sudo apt install ./cor-debian-packages_6_$(arch).deb
 ```
 
 That's it.
@@ -30,7 +30,7 @@ That's it.
 2. Edit the 2 control files to your convenance. Don't forget to increment the
    version number!
 3. Run the `update` script that will build the packages for you.
-4. `sudo apt install ./cor-debian-packages_6_$(arch).deb`
+4. `sudo apt install ./cor-debian-packages_7_$(arch).deb`
 5. Before pushing to git, don't forget to change the README with the proper
    versions numbers.
 
