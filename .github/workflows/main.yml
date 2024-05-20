@@ -1,0 +1,47 @@
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: build
+      if: always()
+      run: |
+        sudo apt update
+        sudo apt install equivs
+        ./update
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: packages
+        path: '*.deb'
+
+  release:
+      needs: [build]
+      permissions: write-all
+      runs-on: ubuntu-latest
+
+      steps:
+        - uses: actions/download-artifact@v4
+          with:
+            name: packages
+            path: '*.deb'
+
+        - name: release
+          uses: marvinpinto/action-automatic-releases@latest
+          with:
+            title: Continuous build
+            automatic_release_tag: continuous
+            prerelease: false
+            draft: false
+            files: '*.deb'
+            repo_token: ${{ secrets.GITHUB_TOKEN }}
