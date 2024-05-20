@@ -2,12 +2,12 @@
 
 ## About
 
-The current Champions of Regnum client is build against old version of
+The current Champions of Regnum client is built against an old version of
 `libncursesw` and `libtinfo` that [has been deprecated almost 10 years
 ago](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=796835) by Debian and is
-doomed to disappear from all Debian-based distribution released after 2024. As
+doomed to disappear from all Debian-based distributions released after 2024. As
 well, `libgtk2` is far from being on its way out yet it's also deprecated, but
-it's totally possibile to have an usable system without it.
+it's totally possible to have an usable system without it.
 
 This package installs potentially missing dependencies and create symbolic
 links to old libraries' `.so` files.
