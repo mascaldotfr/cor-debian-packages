@@ -3,7 +3,7 @@ Priority: optional
 Essential: no
 Standards-Version: 4.5.1
 Package: cor-debian-packages
-Version: 5
+Version: 6
 Maintainer: mascal
 Architecture: amd64
 Copyright: LICENSE
@@ -12,6 +12,9 @@ Depends:
  libncursesw6,
  libtinfo6,
  libgtk2.0-0 | libgtk2.0-0t64
+Conflicts:
+ libncursesw5,
+ libtinfo5
 Links: /lib/x86_64-linux-gnu/libncursesw.so.6 /lib/x86_64-linux-gnu/libncursesw.so.5
  /lib/x86_64-linux-gnu/libtinfo.so.6 /lib/x86_64-linux-gnu/libtinfo.so.5
 Description: required packages for Champions of Regnum
